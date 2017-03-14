@@ -1,0 +1,15 @@
+<html>
+<script type="text/javascript">
+   function parseQueryString() {
+      var qs = window.location.search.substr(1).split("&");
+      var params = {};
+      qs.forEach(function(entry) {
+        var arr = entry.split("=");
+        params[arr[0]] = arr[1];
+      });
+      console.log(params);
+   }
+</script>
+
+<body onload="parseQueryString()">
+</html>
